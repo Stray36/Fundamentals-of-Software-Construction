@@ -1,0 +1,11 @@
+E:\Codefield\C#\Calculator1\bin\Debug\Calculator1.exe.config
+E:\Codefield\C#\Calculator1\bin\Debug\Calculator1.exe
+E:\Codefield\C#\Calculator1\bin\Debug\Calculator1.pdb
+E:\Codefield\C#\Calculator1\obj\Debug\Calculator1.csproj.AssemblyReference.cache
+E:\Codefield\C#\Calculator1\obj\Debug\Calculator1.csproj.SuggestedBindingRedirects.cache
+E:\Codefield\C#\Calculator1\obj\Debug\Calculator1.Form1.resources
+E:\Codefield\C#\Calculator1\obj\Debug\Calculator1.Properties.Resources.resources
+E:\Codefield\C#\Calculator1\obj\Debug\Calculator1.csproj.GenerateResource.cache
+E:\Codefield\C#\Calculator1\obj\Debug\Calculator1.csproj.CoreCompileInputs.cache
+E:\Codefield\C#\Calculator1\obj\Debug\Calculator1.exe
+E:\Codefield\C#\Calculator1\obj\Debug\Calculator1.pdb
