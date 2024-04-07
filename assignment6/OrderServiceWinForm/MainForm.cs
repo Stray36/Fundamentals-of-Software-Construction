@@ -26,7 +26,7 @@ namespace OrderServiceWinForm
             string[] results = Enum.GetNames(typeof(Products));
         }
 
-                private void ItemAdd_Click(object sender, EventArgs e)
+        private void ItemAdd_Click(object sender, EventArgs e)
         {
             LinkAddForm form = new LinkAddForm();
             form.Show();
@@ -92,12 +92,6 @@ namespace OrderServiceWinForm
                     MessageBox.Show("格式错误");
                     return false;
                 }
-                //Match m2 = rx1.Match(o.OrderNum);
-                //if (m2.Success == false)
-                //{
-                //    MessageBox.Show("订单号格式错误");
-                //    return false;
-                //}
             }
             orderService.Export(path);
             return true;
