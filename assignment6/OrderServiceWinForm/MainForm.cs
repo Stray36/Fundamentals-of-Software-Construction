@@ -23,7 +23,7 @@ namespace OrderServiceWinForm
 
             FindCondition.SelectedIndex = FindCondition.Items.IndexOf("None");
 
-            string[] results = Enum.GetNames(typeof(Products));  //对combobox赋值 
+            string[] results = Enum.GetNames(typeof(Products));
 
             for (int i = 0; i < results.Length; i++)
             {
@@ -47,7 +47,7 @@ namespace OrderServiceWinForm
                 {
                     orderBindingSource.DataSource = orderService.FindOrderByClientName(KeyWord);
                 }
-                else if (FindCondition.SelectedItem.ToString() == "产品名称")
+                else if (FindCondition.SelectedItem.ToString() == "总金额")
                 {
                     comboBox1.Visible = true;
                     orderBindingSource.DataSource =
@@ -68,16 +68,6 @@ namespace OrderServiceWinForm
             {
                 MessageBox.Show(ev.Message);
             }
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void queryInput_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private bool Save()
