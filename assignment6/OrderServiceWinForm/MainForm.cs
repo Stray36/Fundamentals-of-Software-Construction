@@ -24,14 +24,26 @@ namespace OrderServiceWinForm
             FindCondition.SelectedIndex = FindCondition.Items.IndexOf("None");
 
             string[] results = Enum.GetNames(typeof(Products));
-
-            for (int i = 0; i < results.Length; i++)
-            {
-                comboBox2.Items.Add(results[i]);
-                comboBox1.Items.Add(results[i]);
-            }
         }
 
+                private void ItemAdd_Click(object sender, EventArgs e)
+        {
+            LinkAddForm form = new LinkAddForm();
+            form.Show();
+        }
+
+        private void ItemModify_Click(object sender, EventArgs e)
+        {
+            LinkModifyForm form = new LinkModifyForm();
+            form.Show();
+        }
+
+        private void ItemDelete_Click(object sender, EventArgs e)
+        {
+            LinkDeleteForm form = new LinkDeleteForm();
+            form.Show();
+        }
+        
         private void FindBtn_Click(object sender, EventArgs e)
         {
             try
@@ -159,22 +171,6 @@ namespace OrderServiceWinForm
         }
 
 
-        private void ItemAdd_Click(object sender, EventArgs e)
-        {
-            LinkAddForm form = new LinkAddForm();
-            form.Show();
-        }
 
-        private void ItemModify_Click(object sender, EventArgs e)
-        {
-            LinkModifyForm form = new LinkModifyForm();
-            form.Show();
-        }
-
-        private void ItemDelete_Click(object sender, EventArgs e)
-        {
-            LinkDeleteForm form = new LinkDeleteForm();
-            form.Show();
-        }
     }
 }
