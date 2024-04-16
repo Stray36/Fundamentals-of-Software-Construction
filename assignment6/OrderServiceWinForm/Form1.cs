@@ -23,15 +23,27 @@ namespace OrderServiceWinForm
 
             FindCondition.SelectedIndex = FindCondition.Items.IndexOf("None");
 
-            string[] results = Enum.GetNames(typeof(Products));  //对combobox赋值 
-
-            for (int i = 0; i < results.Length; i++)
-            {
-                comboBox2.Items.Add(results[i]);
-                comboBox1.Items.Add(results[i]);
-            }
+            string[] results = Enum.GetNames(typeof(Products));
         }
 
+        private void ItemAdd_Click(object sender, EventArgs e)
+        {
+            LinkAddForm form = new LinkAddForm();
+            form.Show();
+        }
+
+        private void ItemModify_Click(object sender, EventArgs e)
+        {
+            LinkModifyForm form = new LinkModifyForm();
+            form.Show();
+        }
+
+        private void ItemDelete_Click(object sender, EventArgs e)
+        {
+            LinkDeleteForm form = new LinkDeleteForm();
+            form.Show();
+        }
+        
         private void FindBtn_Click(object sender, EventArgs e)
         {
             try
@@ -47,7 +59,7 @@ namespace OrderServiceWinForm
                 {
                     orderBindingSource.DataSource = orderService.FindOrderByClientName(KeyWord);
                 }
-                else if (FindCondition.SelectedItem.ToString() == "产品名称")
+                else if (FindCondition.SelectedItem.ToString() == "总金额")
                 {
                     comboBox1.Visible = true;
                     orderBindingSource.DataSource =
@@ -70,16 +82,6 @@ namespace OrderServiceWinForm
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void queryInput_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private bool Save()
         {
             foreach (var o in orderService.Orders)
@@ -90,12 +92,6 @@ namespace OrderServiceWinForm
                     MessageBox.Show("格式错误");
                     return false;
                 }
-                //Match m2 = rx1.Match(o.OrderNum);
-                //if (m2.Success == false)
-                //{
-                //    MessageBox.Show("订单号格式错误");
-                //    return false;
-                //}
             }
             orderService.Export(path);
             return true;
@@ -169,22 +165,6 @@ namespace OrderServiceWinForm
         }
 
 
-        private void ItemAdd_Click(object sender, EventArgs e)
-        {
-            LinkAddForm form = new LinkAddForm();
-            form.Show();
-        }
 
-        private void ItemModify_Click(object sender, EventArgs e)
-        {
-            LinkModifyForm form = new LinkModifyForm();
-            form.Show();
-        }
-
-        private void ItemDelete_Click(object sender, EventArgs e)
-        {
-            LinkDeleteForm form = new LinkDeleteForm();
-            form.Show();
-        }
     }
 }
