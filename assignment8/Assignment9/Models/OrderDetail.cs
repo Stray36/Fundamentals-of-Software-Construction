@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assignment9.Models {
+namespace assignment9.Models {
 
     /**
      **/

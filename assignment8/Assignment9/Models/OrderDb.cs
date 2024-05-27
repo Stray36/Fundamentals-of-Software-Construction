@@ -1,10 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace Assignment9.Models
+namespace assignment9.Models
 {
-    public class OrderDbContext : DbContext
+    public class OrderDb : DbContext
     {
-        public OrderDbContext(DbContextOptions<OrderDbContext> options)
+        public OrderDb(DbContextOptions<OrderDb> options)
             : base(options)
         {
              this.Database.EnsureCreated(); //自动建库建表

@@ -6,10 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
 
-namespace Assignment9.Models {
+namespace assignment9.Models {
 
-    /**
-     **/
     public class Order : IComparable<Order> {
 
         public string OrderId { get; set; }

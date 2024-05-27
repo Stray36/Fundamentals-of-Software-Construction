@@ -1,8 +1,8 @@
 
 using Microsoft.EntityFrameworkCore;
-using Assignment9.Models;
+using assignment9.Models;
 
-namespace Assignment9 {
+namespace assignment9 {
     public class Program {
         public static void Main(string[] args) {
             var builder = WebApplication.CreateBuilder(args);
@@ -11,7 +11,7 @@ namespace Assignment9 {
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             String? connnectionString= builder.Configuration.GetConnectionString("orderDB");
-            builder.Services.AddDbContext<OrderDbContext>(opt => opt.UseMySQL(connnectionString));
+            builder.Services.AddDbContext<OrderDb>(opt => opt.UseMySQL(connnectionString));
             builder.Services.AddScoped<OrderService>();
 
             var app = builder.Build();

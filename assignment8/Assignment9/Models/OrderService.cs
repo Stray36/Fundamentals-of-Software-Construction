@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 using Microsoft.EntityFrameworkCore;
 
-namespace Assignment9.Models {
+namespace assignment9.Models {
 
     /**
      * The service class to manage orders
      * */
     public class OrderService {
 
-        OrderDbContext dbContext;
+        OrderDb dbContext;
 
-        public OrderService(OrderDbContext dbContext) {
+        public OrderService(OrderDb dbContext) {
             this.dbContext = dbContext;
         }
 
